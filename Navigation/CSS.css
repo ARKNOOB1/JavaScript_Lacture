@@ -4,6 +4,7 @@
 }
 
 body {
+    margin: 0;
     color: white;
     background-color: rgb(30, 30, 30);
 }
@@ -14,4 +15,23 @@ li {
 a {
     text-decoration: none;
     color: white;
+}
+
+nav {
+    border-bottom: solid 1px;
+    width: 100vw;
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
