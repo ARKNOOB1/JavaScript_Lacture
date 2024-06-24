@@ -61,7 +61,16 @@ function shoot (e) {
     function moveBullet() {
         stage[bulletLoc].classList.remove("bullet");
         bulletLoc -= stageSize;
+        if (bulletLoc < 0) {
+            clearInterval(id);
+            return;
+        }
         stage[bulletLoc].classList.add("bullet");
+        if (stage[bulletLoc].classList.contains("invader")) {
+            stage[bulletLoc].classList.remove("invader")
+            stage[bulletLoc].classList.remove("bullet")
+            stage[bulletLoc].classList.add("boom")
+        }
     }
     if (e.key === "ArrowUp") {
         id = setInterval(moveBullet, 250);
